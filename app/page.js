@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="p-4 bg-black text-white min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="card bg-gradient-to-br from-purple-700 to-gray-900">
+        <div className="card bg-gradient-to-br from-purple-500 to-gray-900">
           <div className="card-body items-center text-center">
             <h2 className="card-title">21°C</h2>
             <p>Leeds</p>
@@ -12,7 +12,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card bg-gradient-to-br from-gray-700 to-gray-900">
+        <div className="card bg-gradient-to-br from-green-300 to-gray-900">
           <div className="card-body">
             <h2 className="card-title">3 Days Forecast</h2>
             <div className="flex justify-between">
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card bg-gradient-to-br from-gray-700 to-gray-900">
+        <div className="card bg-gradient-to-br from-cyan-300 to-gray-900">
           <div className="card-body">
             <h2 className="card-title">Today's Highlights</h2>
             <div className="flex justify-between">
