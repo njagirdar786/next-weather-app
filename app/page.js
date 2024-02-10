@@ -6,7 +6,7 @@ export default function Home() {
       <input
         type="text"
         placeholder="Location..."
-        className="input input-bordered input-primary w-full max-w-xs mb-8 mt-4"
+        className="input w-full max-w-xs mb-8 mt-4"
       />
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -39,6 +39,14 @@ export default function Home() {
         <div className="card bg-gradient-to-br from-cyan-300 to-gray-900">
           <div className="card-body">
             <h2 className="card-title">Today's Highlights</h2>
+            <div className="flex justify-between">
+              <span>Humidity</span>
+              <span>84%</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Humidity</span>
+              <span>84%</span>
+            </div>
             <div className="flex justify-between">
               <span>Humidity</span>
               <span>84%</span>
