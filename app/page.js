@@ -1,13 +1,11 @@
 "use client";
 
+import Search from "./components/Search";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
-      <input
-        type="text"
-        placeholder="Location..."
-        className="input w-full max-w-xs mb-8 mt-4"
-      />
+      <Search />
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="card bg-gradient-to-br from-purple-500 to-gray-900">
