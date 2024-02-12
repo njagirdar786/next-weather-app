@@ -10,5 +10,7 @@ export async function GET(request) {
   const res = await fetch(url);
   const data = await res.json();
 
-  NextResponse.json(data);
+  console.log(url);
+
+  return NextResponse.json(data);
 }
