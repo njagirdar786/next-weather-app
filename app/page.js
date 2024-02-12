@@ -5,7 +5,7 @@ import Search from "./components/Search";
 
 export default function Home() {
   const [location, setLocation] = useState("");
-  const [weather, setWeather] = useState("");
+  const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +16,7 @@ export default function Home() {
           method: "GET",
         },
       });
-      const data = await response;
+      const data = await response.json();
       console.log(data);
       setWeather(data);
     };
