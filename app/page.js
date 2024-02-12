@@ -3,6 +3,8 @@
 import Search from "./components/Search";
 
 export default function Home() {
+  const apiKey = process.env.WEATHER_API_KEY;
+
   return (
     <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
       <Search />
