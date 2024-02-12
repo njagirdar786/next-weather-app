@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import Search from "./components/Search";
 
 export default function Home() {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Leeds");
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       // Use a relative URL for the API route
-      const response = await fetch(`/api/weather?location=London`, {
+      const response = await fetch(`/api/weather?location=${location}`, {
         headers: {
           Accept: "application/json",
           method: "GET",
@@ -28,7 +28,7 @@ export default function Home() {
     <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
       <Search />
 
-      <h1>{weather.location.name}</h1>
+      {weather && <h1>{weather.location.name}</h1>}
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="card bg-gradient-to-br from-purple-500 to-gray-900">
