@@ -6,9 +6,6 @@ import Search from "./components/Search";
 export default function Home() {
   const [location, setLocation] = useState("");
 
-  const apiKey = process.env.WEATHER_API_KEY;
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3&aqi=no&alerts=no`;
-
   return (
     <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
       <Search />
