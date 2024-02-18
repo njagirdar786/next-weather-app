@@ -23,11 +23,11 @@ export default function Home() {
     };
 
     fetchData();
-  }, []);
+  }, [location]);
 
   return (
     <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
-      <Search />
+      <Search getLocation={(search) => setLocation(search)} />
 
       {weather && (
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
