@@ -27,16 +27,18 @@ export default function Home() {
   }, [location]);
 
   return (
-    <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
-      <Search getLocation={(search) => setLocation(search)} />
+    <>
+      <div className="flex flex-col items-center p-4 bg-black text-white min-h-screen">
+        <Search getLocation={(search) => setLocation(search)} />
 
-      {weather && (
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <CurrentWeather data={weather} />
-          <WeatherDetails data={weather} />
-          <WeatherForecast />
-        </div>
-      )}
-    </div>
+        {weather && (
+          <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <CurrentWeather data={weather} />
+            <WeatherDetails data={weather} />
+            <WeatherForecast />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
